@@ -17,9 +17,4 @@ const forecast = function (latitude, longitude, callback) {
         });
 }
 
-forecast(34.0536909, -118.242766, (error, data) => {
-    console.log(error)
-    console.log(data)
-});
-
 module.exports = forecast;
