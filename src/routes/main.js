@@ -44,7 +44,9 @@ router.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
         developer: 'Mohammad Hosseini',
-        githubLink: 'https://github.com/1mimhe'
+        githubLink: 'https://github.com/1mimhe',
+        telegramLink: 'https://t.me/iMimHe',
+        xLink: 'https://x.com/1mimhe'
     });
 });
 
