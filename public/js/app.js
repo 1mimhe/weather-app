@@ -34,15 +34,15 @@ form.addEventListener('submit', (e) => {
             if (data.error) {
                 time.textContent = data.forecastData.error;
             } else {
-                time.textContent = (new Date(data.forecastData.current_weather.time)).toLocaleString();
-                inp.textContent = data.address;
-                loc.textContent = data.location;
-                temp.textContent = data.forecastData.current_weather.temperature;
-                desc.textContent = weatherCodes[Number(data.forecastData.current_weather.weathercode)];
-                wind.textContent = data.forecastData.current_weather.windspeed;
-                mm_temp.textContent = '[' + data.forecastData.daily.temperature_2m_min[0] + ', ' + data.forecastData.daily.temperature_2m_max[0] + ']';
-                s_rise.textContent = (new Date(data.forecastData.daily.sunrise[0])).toLocaleString();
-                s_set.textContent = (new Date(data.forecastData.daily.sunset[0])).toLocaleString();
+                time.textContent = 'Data time: ' + (new Date(data.forecastData.current_weather.time)).toLocaleString();
+                inp.textContent = 'Input Address: ' + data.address;
+                loc.textContent = 'Location: ' + data.location;
+                temp.textContent = 'Temperature: ' + data.forecastData.current_weather.temperature;
+                desc.textContent = 'Weather Description: ' + weatherCodes[Number(data.forecastData.current_weather.weathercode)];
+                wind.textContent = 'WindSpeed: ' + data.forecastData.current_weather.windspeed;
+                mm_temp.textContent = 'Min/Max Today Temperature: ' + '[' + data.forecastData.daily.temperature_2m_min[0] + ', ' + data.forecastData.daily.temperature_2m_max[0] + ']';
+                s_rise.textContent = 'Sunrise: ' + (new Date(data.forecastData.daily.sunrise[0])).toLocaleString();
+                s_set.textContent = 'Sunset: ' + (new Date(data.forecastData.daily.sunset[0])).toLocaleString();
                 locationInput.value = '';
             }
         });
